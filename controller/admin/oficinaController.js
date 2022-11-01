@@ -13,4 +13,4 @@ async function edt(req, res) {}
 //função que deleta ítens
 async function del(req, res) {}
 
-module.exports = [lst, filtro, abreadd, add, abreedt, edt, del];
+module.exports = { lst, filtro, abreadd, add, abreedt, edt, del };
