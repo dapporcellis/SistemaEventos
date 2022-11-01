@@ -3,7 +3,9 @@ async function lst(req, res) {}
 //função que lista todos ítens de acordo com pesquisa
 async function filtro(req, res) {}
 //função que abre a tela de add
-async function abreadd(req, res) {}
+async function abreadd(req, res) {
+  res.render("admin/admin/add");
+}
 //função que adiciona
 async function add(req, res) {}
 //função que abre tela de edt
