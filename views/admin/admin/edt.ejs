@@ -9,25 +9,25 @@
                         <div class="example">
                             <div class="tab-content rounded-bottom">
                                 <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-739">
-                                    <form>
+                                    <form method="post">
                                         <div class="mb-3">
                                             <label class="form-label" for="exampleFormControlInput">Id</label>
-                                            <input class="form-control" readonly name="id" id="exampleFormControlInput" type="text">
+                                            <input class="form-control" readonly name="id" id="exampleFormControlInput" type="text" value="<%=Admin.id%>">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="exampleFormControlInput1">Nome</label>
                                             <input class="form-control" name="nome" id="exampleFormControlInput1" type="text"
-                                                placeholder="Digite o nome!">
+                                                placeholder="Digite o nome!" value="<%=Admin.nome%>">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="exampleFormControlInput2">Email</label>
                                             <input class="form-control" name="email" id="exampleFormControlInput2" type="email"
-                                                placeholder="name@example.com">
+                                                placeholder="name@example.com" value="<%=Admin.email%>">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="exampleFormControlInput3">Senha</label>
                                             <input class="form-control" name="senha" id="exampleFormControlInput3" type="password"
-                                                placeholder="Digite a senha!">
+                                                placeholder="Digite a senha!" value="<%=Admin.senha%>">
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="formFile">Foto</label>

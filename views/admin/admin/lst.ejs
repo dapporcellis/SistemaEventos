@@ -7,9 +7,9 @@
                     <div class="card-header"><strong>Admin</strong></div>
                     <div class="card-body">
                         <div class="example">
-                            <form>
+                            <form method="post">
                                 <div class="input-group mb-3">                                
-                                    <input class="form-control" type="text" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="button-addon2">
+                                    <input class="form-control" name="pesquisar" type="text" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="button-addon2">
                                     <button class="btn btn-outline-secondary" id="button-addon2" type="submit">Pesquisar</button>
                                 </div>
                             </form>                           
@@ -26,20 +26,22 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Diego</td>
-                                                <td>dapporcellis@hotmail.com</td>
-                                                <td>
-                                                    <a href="/admin/admin/edt">
-                                                        <i class="icon icon-2xl mb-2 cil-pencil"></i>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <a href="/admin/admin/edt">
-                                                        <i class="icon icon-2xl mb-2 cil-trash"></i></td>
-                                                    </a>
-                                            </tr>                                            
+                                            <%Admins.forEach(function(admin){%>
+                                                <tr>
+                                                    <th scope="row"><%=admin.id%></th>
+                                                    <td><%=admin.nome%></td>
+                                                    <td><%=admin.email%></td>
+                                                    <td>
+                                                        <a href="/admin/admin/edt/<%=admin.id%>">
+                                                            <i class="icon icon-2xl mb-2 cil-pencil"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/admin/admin/del/<%=admin.id%>">
+                                                            <i class="icon icon-2xl mb-2 cil-trash"></i></td>
+                                                        </a>
+                                                </tr>                              
+                                            <%})%>              
                                         </tbody>
                                     </table>
                                 </div>

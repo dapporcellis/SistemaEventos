@@ -11,10 +11,10 @@ router.get("/admin/add", adminController.abreadd);
 //rota que adiciona o admin
 router.post("/admin/add", adminController.add);
 //rota para abrir a tela de editar admin
-router.get("/admin/edt", adminController.abreedt);
+router.get("/admin/edt/:id", adminController.abreedt);
 //rota para editar o admin
-router.post("/admin/edt", adminController.edt);
+router.post("/admin/edt/:id", adminController.edt);
 //rota para deletar admin
-router.get("/admin/del", adminController.del);
+router.get("/admin/del/:id", adminController.del);
 
 module.exports = router;
