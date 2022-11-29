@@ -35,11 +35,7 @@ async function abreedt(req, res) {
 //função que edita
 async function edt(req, res) {
   const admin = await Admin.findByPk(req.params.id);
-  admin.nome = req.body.nome
-  admin.email = req.body.email
-  admin.senha = req.body.senha
-  admin.foto = req.body.foto
-  await admin.save()
+  await admin.update(req.body)
   res.redirect('/admin/admin/lst')
 }
 //função que deleta ítens
