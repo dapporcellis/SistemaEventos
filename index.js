@@ -11,6 +11,7 @@ const noticiaRoute = require("./routes/admin/noticiaRoute");
 const oficinaRoute = require("./routes/admin/oficinaRoute");
 const palestraRoute = require("./routes/admin/palestraRoute");
 const patrocinioRoute = require("./routes/admin/patrocinioRoute");
+const publicRoute = require("./routes/public/publicRoute");
 
 const porta = process.env.PORT || 3000;
 
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
+app.use("/", publicRoute);
 app.use("/admin", adminRoute);
 app.use("/admin", eventoRoute);
 app.use("/admin", loginRoute);

@@ -24,7 +24,12 @@ async function abreadd(req, res) {
 }
 //função que adiciona
 async function add(req, res) {
-  const admin = await Admin.create(req.body)
+  const admin = await Admin.create({
+    nome:req.body.nome, 
+    email:req.body.email, 
+    senha:req.body.senha, 
+    foto:req.file.filename //req.file.filename pega o nome da imagem
+  })
   res.redirect('/admin/admin/lst')
 }
 //função que abre tela de edt
@@ -35,7 +40,12 @@ async function abreedt(req, res) {
 //função que edita
 async function edt(req, res) {
   const admin = await Admin.findByPk(req.params.id);
-  await admin.update(req.body)
+  await admin.update({
+    nome:req.body.nome, 
+    email:req.body.email, 
+    senha:req.body.senha, 
+    foto:req.file.filename //o arquivo vem na variável req.file
+  })
   res.redirect('/admin/admin/lst')
 }
 //função que deleta ítens

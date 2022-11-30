@@ -2,21 +2,21 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "sistemaeventos_development",
+    "database": "saci_novo",
     "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "postgres",
-    "database": "sistemaeventos_test",
+    "database": "saci_test",
     "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "postgres",
-    "database": "sistemaeventos_production",
+    "database": "saci_production",
     "host": "localhost",
     "dialect": "postgres"
   }
