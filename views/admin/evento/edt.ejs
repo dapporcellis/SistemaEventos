@@ -1,0 +1,70 @@
+<%- include('../cabecalho') -%>
+<div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-header"><strong>Admin</strong></div>
+                    <div class="card-body">
+                        <div class="example">
+                            <div class="tab-content rounded-bottom">
+                                <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-739">
+                                    <form method="post" enctype="multipart/form-data">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput">Id</label>
+                                            <input class="form-control" readonly name="id" id="exampleFormControlInput" type="text" value="<%=Evento.id%>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput1">Nome</label>
+                                            <input class="form-control" name="nome" id="exampleFormControlInput1" type="text"
+                                                placeholder="Digite o nome do Evento!" value="<%=Evento.nome%>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput2">Frase</label>
+                                            <input class="form-control" name="frase" id="exampleFormControlInput2" type="text"
+                                                placeholder="Digite o tema do Evento!" value="<%=Evento.nome%>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput3">Sobre</label>
+                                            <textarea name="sobre" class="form-control" id="exampleFormControlTextarea3" rows="3"><%=Evento.sobre%></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput4">Local</label>
+                                            <input class="form-control" name="local" id="exampleFormControlInput4" type="text"
+                                                placeholder="Digite o local do evento por extenso!" value="<%=Evento.local%>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput5">Data de início do evento</label>
+                                            <input class="form-control" name="datainicio" id="exampleFormControlInput5" type="date"
+                                                placeholder="Digite a data de ínicio do evento" value="<%=moment(Evento.datainicio).format('YYYY-MM-DD')%>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="exampleFormControlInput6">Data de fim do evento</label>
+                                            <input class="form-control" name="datafim" id="exampleFormControlInput6" type="date"
+                                                placeholder="Digite a data de fim do evento" value="<%=moment(Evento.datafim).format('YYYY-MM-DD')%>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="formFile">Logo</label>
+                                            <input class="form-control" name="logo" id="formFile" type="file">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="formFile">Banner</label>
+                                            <input class="form-control" name="banner" id="formFile" type="file">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="formFile">Foto Sobre</label>
+                                            <input class="form-control" name="fotosobre" id="formFile" type="file">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Editar</button>
+                                        <button type="reset" class="btn btn-light">Limpar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../rodape') -%>

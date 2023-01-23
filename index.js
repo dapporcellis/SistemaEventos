@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
+var moment = require('moment');
+app.locals.moment = moment;
+
 //importar as rotas
 const adminRoute = require("./routes/admin/adminRoute");
 const eventoRoute = require("./routes/admin/eventoRoute");
