@@ -7,6 +7,7 @@ async function lst(req, res) {
   const eventos = await Evento.findAll()
   res.render("admin/evento/lst", {  Eventos:eventos });
 }
+
 //função que lista todos ítens de acordo com pesquisa
 async function filtro(req, res) {
   const eventos = await Evento.findAll({
@@ -19,11 +20,11 @@ async function filtro(req, res) {
   res.render("admin/evento/lst" , { Eventos:eventos});
 }
 
-
 //função que abre a tela de add
 async function abreadd(req, res) {
   res.render("admin/evento/add");
 }
+
 //função que adiciona
 async function add(req, res) {
   
@@ -40,11 +41,13 @@ async function add(req, res) {
   })
   res.redirect('/admin/evento/lst')
 }
+
 //função que abre tela de edt
 async function abreedt(req, res) {
   const evento = await Evento.findByPk(req.params.id);
   res.render("admin/evento/edt", {Evento:evento});
 }
+
 //função que edita
 async function edt(req, res) {
   const evento = await Evento.findByPk(req.params.id);
@@ -61,6 +64,7 @@ async function edt(req, res) {
   }).catch(function (err) {console.log(err);});
   res.redirect('/admin/evento/lst')
 }
+
 //função que deleta ítens
 async function del(req, res) {
   const evento = await Evento.findByPk(req.params.id);
