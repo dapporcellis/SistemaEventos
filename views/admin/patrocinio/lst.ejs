@@ -1,0 +1,57 @@
+<%- include('../cabecalho') -%>
+<div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-header"><strong>Patrocínio</strong></div>
+                    <div class="card-body">
+                        <div class="example">
+                            <form method="post">
+                                <div class="input-group mb-3">                                
+                                    <input class="form-control" name="pesquisar" type="text" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="button-addon2">
+                                    <button class="btn btn-outline-secondary" id="button-addon2" type="submit">Pesquisar</button>
+                                </div>
+                            </form>                           
+                            <div class="tab-content rounded-bottom">
+                                <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-587">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col">Logo</th>
+                                                <th scope="col">Edita</th>
+                                                <th scope="col">Deleta</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <%Patrocinios.forEach(function(patrocinio){%>
+                                                <tr>
+                                                    <th scope="row"><%=patrocinio.id%></th>
+                                                    <td><%=patrocinio.nome%></td>
+                                                    <td>
+                                                        <img style="max-height:50px;" src="imgs/<%=patrocinio.logo%>" alt="<%=patrocinio.site%>"></td>
+                                                    <td>
+                                                        <a href="/admin/patrocinio/edt/<%=patrocinio.id%>">
+                                                            <i class="icon icon-2xl mb-2 cil-pencil"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/admin/patrocinio/del/<%=patrocinio.id%>">
+                                                            <i class="icon icon-2xl mb-2 cil-trash"></i></td>
+                                                        </a>
+                                                </tr>                              
+                                            <%})%>              
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../rodape') -%>
